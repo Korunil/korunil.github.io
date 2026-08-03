@@ -610,3 +610,95 @@ z-index:999;
 background:#3b82f6;
 
 }
+
+/* =====================================================
+ENGINEERING EXPERTISE
+===================================================== */
+
+.expertise-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.expertise-card{
+
+background:#1e293b;
+
+padding:30px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.expertise-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 15px 45px rgba(0,0,0,.35);
+
+}
+
+.expertise-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:0;
+
+height:5px;
+
+width:100%;
+
+background:linear-gradient(90deg,#2563eb,#38bdf8);
+
+}
+
+.expertise-card h3{
+
+margin-bottom:18px;
+
+color:#60a5fa;
+
+font-size:1.25rem;
+
+}
+
+.expertise-card p{
+
+color:#cbd5e1;
+
+margin-bottom:20px;
+
+}
+
+.expertise-card ul{
+
+padding-left:18px;
+
+}
+
+.expertise-card li{
+
+margin-bottom:10px;
+
+color:#f8fafc;
+
+}
