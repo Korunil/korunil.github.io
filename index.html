@@ -4,32 +4,45 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AK Lab | Applied AI Engineering</title>
+<title>AK LAB | Enterprise AI Engineering</title>
 
-<link rel="stylesheet" href="style.css">
+<meta name="description"
+content="AK Lab builds trustworthy AI systems for regulated industries using Generative AI, Agentic AI, Enterprise Knowledge Systems and Industrial Intelligence.">
 
 <link rel="icon" href="assets/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 
 </head>
 
 <body>
 
-<nav>
+<div id="particles"></div>
+
+<header>
+
+<nav class="navbar">
 
 <div class="logo">
-AK Lab
+
+<span class="logo-ak">AK</span>
+
+<span class="logo-lab">LAB</span>
+
 </div>
 
-<ul>
+<ul class="nav-links">
 
 <li><a href="#about">About</a></li>
 
@@ -37,149 +50,309 @@ AK Lab
 
 <li><a href="#research">Research</a></li>
 
-<li><a href="#timeline">Journey</a></li>
-
-<li><a href="#gallery">Architecture</a></li>
+<li><a href="#timeline">Timeline</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
-</nav>
-
-<!-- ====================================================== -->
-
-<header class="hero">
-
-<div class="hero-left">
-
-<h1>
-
-Applied AI Engineering
-
-for
-
-Safety-Critical Systems
-
-</h1>
-
-<p>
-
-Building trustworthy AI systems that combine engineering,
-research and enterprise intelligence.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#projects" class="primary">
-
-Explore Projects
-
-</a>
-
-<a href="docs/Resume.pdf" target="_blank" class="secondary">
+<a href="docs/Resume.pdf" class="resume-btn" target="_blank">
 
 Resume
 
 </a>
 
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<img src="assets/profile.jpg">
-
-</div>
+</nav>
 
 </header>
 
-<!-- ====================================================== -->
+<section class="hero">
 
-<section id="about">
+<div class="hero-content">
 
-<h2>About</h2>
+<p class="hero-tag">
+
+Enterprise Artificial Intelligence Engineering
+
+</p>
+
+<h1>
+
+Building
+
+<span class="gradient">
+
+Trustworthy AI
+
+</span>
+
+for
+
+Regulated Industries
+
+</h1>
+
+<p class="hero-description">
+
+I design enterprise AI systems that combine Large Language Models,
+
+Agentic AI, Retrieval-Augmented Generation and Engineering Intelligence
+
+to solve complex industrial problems.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="primary-btn">
+
+Explore Projects
+
+</a>
+
+<a href="docs/CV.pdf"
+
+target="_blank"
+
+class="secondary-btn">
+
+Download CV
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="assets/profile.jpg"
+
+alt="Anil Kumar">
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-card">
+
+<h2 class="counter"
+
+data-target="14">
+
+0
+
+</h2>
 
 <p>
 
-I'm <strong>Anil Kumar Korupoju</strong>,
-Senior Surveyor (R&D) at the Indian Register of Shipping.
+Years Engineering
 
-My work combines AI engineering,
-transformer architectures,
-enterprise knowledge systems,
-engineering automation
-and safety-critical decision support.
+</p>
 
-This website documents the evolution of those systems.
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter"
+
+data-target="4">
+
+0
+
+</h2>
+
+<p>
+
+Production AI Systems
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 class="counter"
+
+data-target="5">
+
+0
+
+</h2>
+
+<p>
+
+Research Publications
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+IMO
+
+</h2>
+
+<p>
+
+International Contributor
+
+</p>
+
+</div>
+
+</section>
+
+<section id="about"
+
+class="about">
+
+<div class="section-title">
+
+ABOUT AK LAB
+
+</div>
+
+<h2>
+
+Engineering Intelligence
+
+Meets
+
+Artificial Intelligence
+
+</h2>
+
+<p>
+
+AK Lab explores how modern AI can transform safety-critical engineering.
+
+My work spans enterprise knowledge systems,
+
+large language models,
+
+agentic AI,
+
+digital transformation,
+
+and industrial intelligence—
+
+bridging rigorous engineering principles with production-grade AI systems.
 
 </p>
 
 </section>
 
-<!-- ====================================================== -->
+<section id="projects"
 
-<section id="projects">
+class="projects">
 
-<h2>Featured AI Systems</h2>
+<div class="section-title">
+
+FEATURED PROJECTS
+
+</div>
 
 <div class="project-grid">
 
-<a href="projects/chatpdf/index.html" class="project-card">
+<a href="projects/chatpdf/index.html"
+
+class="project-card">
 
 <img src="images/chatpdf.jpg">
 
-<h3>ChatPDF</h3>
+<div class="card-content">
+
+<h3>
+
+ChatPDF
+
+</h3>
 
 <p>
 
-Production Retrieval-Augmented Generation platform.
+Enterprise Retrieval-Augmented Generation Platform
 
 </p>
 
+</div>
+
 </a>
 
-<a href="projects/stackfix/index.html" class="project-card">
+<a href="projects/stackfix/index.html"
+
+class="project-card">
 
 <img src="images/stackfix.png">
 
-<h3>StackFix</h3>
+<div class="card-content">
+
+<h3>
+
+StackFix
+
+</h3>
 
 <p>
 
-Agentic AI troubleshooting platform.
+Multi-Agent AI Troubleshooting System
 
 </p>
 
+</div>
+
 </a>
 
-<a href="projects/navisight/index.html" class="project-card">
+<a href="projects/navisight/index.html"
+
+class="project-card">
 
 <img src="images/navisight.png">
 
-<h3>NAVISIGHT</h3>
+<div class="card-content">
+
+<h3>
+
+NAVISIGHT
+
+</h3>
 
 <p>
 
-Self-supervised maritime intelligence.
+Self-Supervised Maritime Intelligence
 
 </p>
+
+</div>
 
 </a>
 
-<a href="projects/scre/index.html" class="project-card">
+<a href="projects/scre/index.html"
+
+class="project-card">
 
 <img src="images/scre.jpg">
 
-<h3>SCRE</h3>
+<div class="card-content">
+
+<h3>
+
+SCRE
+
+</h3>
 
 <p>
 
-Transformer-based collision prediction.
+Engineering Software
 
 </p>
+
+</div>
 
 </a>
 
@@ -187,21 +360,47 @@ Transformer-based collision prediction.
 
 </section>
 
-<!-- ====================================================== -->
+<section id="research"
 
-<section id="research">
+class="research-preview">
 
-<h2>Research & Publications</h2>
+<div class="section-title">
+
+RESEARCH
+
+</div>
+
+<h2>
+
+Publications,
+
+Industrial Articles,
+
+and
+
+Engineering Research
+
+</h2>
 
 <p>
 
-Peer-reviewed research,
-industrial publications
-and applied AI engineering.
+Peer-reviewed publications,
+
+international technical contributions,
+
+and industry thought leadership focused on
+
+AI,
+
+Maritime Engineering,
+
+and Safety-Critical Systems.
 
 </p>
 
-<a href="research.html" class="primary">
+<a href="research.html"
+
+class="primary-btn">
 
 View Publications
 
@@ -209,87 +408,137 @@ View Publications
 
 </section>
 
-<!-- ====================================================== -->
+<section id="timeline"
 
-<section id="timeline">
+class="timeline-preview">
 
-<h2>Engineering Journey</h2>
+<div class="section-title">
 
-<p>
+CAREER JOURNEY
 
-A fourteen-year journey from structural engineering
-to enterprise AI architecture.
+</div>
 
-</p>
+<div class="timeline-mini">
 
-<a href="timeline.html" class="primary">
+<span>
 
-Explore Timeline
+2008
 
-</a>
+</span>
+
+<div></div>
+
+<span>
+
+2012
+
+</span>
+
+<div></div>
+
+<span>
+
+IRS
+
+</span>
+
+<div></div>
+
+<span>
+
+Research
+
+</span>
+
+<div></div>
+
+<span>
+
+Applied AI
+
+</span>
+
+<div></div>
+
+<span>
+
+AK Lab
+
+</span>
+
+</div>
 
 </section>
 
-<!-- ====================================================== -->
+<section id="contact"
 
-<section id="gallery">
+class="contact">
 
-<h2>Architecture Gallery</h2>
+<div class="section-title">
 
-<p>
+LET'S BUILD
 
-System architectures,
-AI pipelines,
-transformer workflows
-and engineering designs.
+</div>
 
-</p>
+<h2>
 
-<a href="architecture.html" class="primary">
+Engineering
 
-Open Gallery
+the Future
 
-</a>
+of AI
 
-</section>
-
-<!-- ====================================================== -->
-
-<section id="contact">
-
-<h2>Let's Connect</h2>
+</h2>
 
 <p>
 
-Interested in AI Engineering,
-Enterprise AI,
-or Maritime Digital Transformation?
+Available for
+
+AI Consulting,
+
+Industrial AI,
+
+Enterprise Knowledge Systems,
+
+Digital Transformation,
+
+Research Collaborations,
+
+and Technical Leadership.
 
 </p>
 
-<div class="contact-links">
+<div class="socials">
 
-<a href="https://github.com/Korunil" target="_blank">
+<a href="https://linkedin.com/in/Anil-Korupoju"
 
-GitHub
-
-</a>
-
-<a href="https://linkedin.com/in/Anil-Korupoju" target="_blank">
+target="_blank">
 
 LinkedIn
 
 </a>
 
-<a href="https://huggingface.co/korunil" target="_blank">
+<a href="https://github.com/Korunil"
 
-Hugging Face
+target="_blank">
+
+GitHub
 
 </a>
 
-<a href="https://scholar.google.com/citations?user=ArDziAsAAAAJ" target="_blank">
+<a href="https://scholar.google.com/citations?user=ArDziAsAAAAJ"
 
-Google Scholar
+target="_blank">
+
+Scholar
+
+</a>
+
+<a href="https://huggingface.co/korunil"
+
+target="_blank">
+
+HuggingFace
 
 </a>
 
@@ -299,11 +548,23 @@ Google Scholar
 
 <footer>
 
-© 2026 AK Lab
+<p>
+
+© 2026 AK LAB
+
+|
+
+Designed & Engineered by
+
+Anil Kumar Korupoju
+
+</p>
 
 </footer>
 
-<script src="script.js"></script>
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/animations.js"></script>
 
 </body>
 
