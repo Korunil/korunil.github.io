@@ -1,0 +1,540 @@
+/* =====================================================
+   AK PORTFOLIO v1.0
+   Modern Engineering Portfolio
+===================================================== */
+
+:root {
+
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface-light: #273549;
+
+    --text: #f8fafc;
+    --text-secondary: #cbd5e1;
+
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+
+    --border: #334155;
+
+    --shadow:
+        0 20px 40px rgba(0,0,0,.30);
+
+    --radius:16px;
+
+    --max-width:1200px;
+
+}
+
+
+/* ===================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.75;
+
+}
+
+/* ===================================== */
+
+.container{
+
+    width:min(92%,var(--max-width));
+
+    margin:auto;
+
+}
+
+.section{
+
+    padding:90px 0;
+
+}
+
+.dark{
+
+    background:#111827;
+
+}
+
+/* ===================================== */
+
+h1{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+h2{
+
+    font-size:2.4rem;
+
+    margin-bottom:40px;
+
+}
+
+h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:12px;
+
+}
+
+p{
+
+    color:var(--text-secondary);
+
+    margin-bottom:20px;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ===================================== */
+/* NAVBAR */
+/* ===================================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(15,23,42,.82);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.navbar{
+
+    width:min(92%,var(--max-width));
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:75px;
+
+}
+
+.logo{
+
+    font-size:1.5rem;
+
+    font-weight:800;
+
+    color:var(--accent);
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    gap:34px;
+
+    list-style:none;
+
+}
+
+.navbar a{
+
+    color:var(--text-secondary);
+
+    transition:.25s;
+
+    font-weight:500;
+
+}
+
+.navbar a:hover{
+
+    color:var(--accent);
+
+}
+
+/* ===================================== */
+/* HERO */
+/* ===================================== */
+
+.hero{
+
+    min-height:92vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    width:min(92%,var(--max-width));
+
+    margin:auto;
+
+}
+
+.tag{
+
+    color:var(--accent);
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h2{
+
+    color:var(--accent);
+
+    margin-top:18px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-text{
+
+    max-width:760px;
+
+    font-size:1.15rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-top:45px;
+
+}
+
+/* ===================================== */
+
+.btn-primary{
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--accent-hover);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-secondary{
+
+    border:1px solid var(--border);
+
+    color:white;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--surface);
+
+}
+
+/* ===================================== */
+/* SKILLS */
+/* ===================================== */
+
+.skills{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.skills span{
+
+    padding:10px 18px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    color:var(--text-secondary);
+
+    transition:.25s;
+
+}
+
+.skills span:hover{
+
+    border-color:var(--accent);
+
+    color:white;
+
+}
+
+/* ===================================== */
+/* PROJECTS */
+/* ===================================== */
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:28px;
+
+}
+
+.project-card{
+
+    background:var(--surface);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:var(--radius);
+
+    padding:34px;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.project-card h3{
+
+    color:white;
+
+}
+
+.project-card p{
+
+    margin-top:12px;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--accent);
+
+}
+
+/* ===================================== */
+/* RESEARCH */
+/* ===================================== */
+
+.research-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:40px;
+
+}
+
+.research-grid ul{
+
+    margin-top:15px;
+
+}
+
+.research-grid li{
+
+    margin-bottom:12px;
+
+    color:var(--text-secondary);
+
+}
+
+/* ===================================== */
+/* CONTACT */
+/* ===================================== */
+
+.links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:24px;
+
+    margin-bottom:45px;
+
+}
+
+.links a{
+
+    color:var(--accent);
+
+    font-weight:600;
+
+}
+
+.links a:hover{
+
+    text-decoration:underline;
+
+}
+
+.footer-text{
+
+    margin-top:30px;
+
+    font-size:.95rem;
+
+    color:#94a3b8;
+
+}
+
+/* ===================================== */
+/* SCROLLBAR */
+/* ===================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#334155;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#475569;
+
+}
+
+/* ===================================== */
+/* MOBILE */
+/* ===================================== */
+
+@media(max-width:768px){
+
+    h1{
+
+        font-size:2.7rem;
+
+    }
+
+    h2{
+
+        font-size:2rem;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        height:auto;
+
+        padding:20px;
+
+        gap:20px;
+
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:80px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
