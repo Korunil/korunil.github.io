@@ -469,3 +469,11 @@ padding:90px 6%;
 }
 
 }
+
+nav a.active{
+
+color:white;
+
+font-weight:700;
+
+}
