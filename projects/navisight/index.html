@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NAVISIGHT | AK Lab</title>
+
+<link rel="stylesheet" href="../../css/main.css">
+<link rel="stylesheet" href="../../css/cards.css">
+<link rel="stylesheet" href="../../css/animations.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<span class="logo-ak">AK</span>
+
+<span class="logo-lab">LAB</span>
+
+</div>
+
+<a href="../../index.html" class="resume-btn">
+
+← Back
+
+</a>
+
+</div>
+
+</header>
+
+<!-- ================================================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-tag">
+
+Foundation AI Research
+
+</div>
+
+<h1>
+
+NAVISIGHT
+
+<span class="gradient">
+
+Self-Supervised Maritime Intelligence
+
+</span>
+
+</h1>
+
+<p class="hero-description">
+
+A transformer-based maritime foundation model trained on
+approximately 192 million AIS observations using
+self-supervised representation learning for vessel behaviour
+modelling, anomaly detection and operational intelligence.
+
+Designed to learn maritime behaviour directly from data,
+without labelled anomalies.
+
+</p>
+
+<div class="hero-buttons">
+
+<a
+
+href="https://github.com/Korunil/navisight"
+
+target="_blank"
+
+class="primary-btn">
+
+GitHub
+
+</a>
+
+<a
+
+href="https://github.com/Korunil/navisight"
+
+target="_blank"
+
+class="secondary-btn">
+
+Research
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="../../images/navisight.png">
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Research Vision
+
+</div>
+
+<h2>
+
+The Challenge
+
+</h2>
+
+<p>
+
+Maritime anomaly detection traditionally depends on manually
+defined behavioural rules or supervised learning requiring
+large labelled datasets.
+
+NAVISIGHT explores a different paradigm.
+
+Instead of learning anomalies directly,
+the model first learns what normal maritime behaviour looks
+like using self-supervised transformer representation
+learning.
+
+Behavioural deviations naturally emerge as anomalies within
+the learned latent representation space.
+
+</p>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Scale
+
+</div>
+
+<h2>
+
+Dataset
+
+</h2>
+
+<div class="project-grid">
+
+<div class="stat-card">
+
+<h2 class="counter" data-target="192">
+
+0
+
+</h2>
+
+<p>
+
+Million AIS Messages
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+35
+
+</h2>
+
+<p>
+
+Engineered Features
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+128
+
+</h2>
+
+<p>
+
+Transformer Dimension
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+0.93
+
+</h2>
+
+<p>
+
+Maximum AUROC
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Architecture
+
+</div>
+
+<h2>
+
+Foundation Model Architecture
+
+</h2>
+
+<img
+
+src="../../images/navisight.png"
+
+style="width:100%;
+border-radius:18px;
+margin-top:40px;">
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Learning Pipeline
+
+</div>
+
+<h2>
+
+Representation Learning Workflow
+
+</h2>
+
+<div class="timeline-mini">
+
+<span>AIS</span>
+
+<div></div>
+
+<span>Weather</span>
+
+<div></div>
+
+<span>Feature Engineering</span>
+
+<div></div>
+
+<span>Transformer Encoder</span>
+
+<div></div>
+
+<span>Latent Space</span>
+
+<div></div>
+
+<span>Memory Bank</span>
+
+<div></div>
+
+<span>Anomaly Detection</span>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Model Components
+
+</div>
+
+<div class="project-grid">
+
+<div class="stat-card">
+
+<h3>
+
+MaritimeMAE
+
+</h3>
+
+<p>
+
+Transformer encoder trained using masked reconstruction.
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Dual-Channel Detector
+
+</h3>
+
+<p>
+
+Reconstruction + manifold drift anomaly detection.
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Latent Memory Bank
+
+</h3>
+
+<p>
+
+Behavioural embedding retrieval.
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Representation Evaluator
+
+</h3>
+
+<p>
+
+Operational intelligence through latent analysis.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Benchmark Results
+
+</div>
+
+<h2>
+
+Performance
+
+</h2>
+
+<div class="project-grid">
+
+<div class="stat-card">
+
+<h2>
+
+0.93
+
+</h2>
+
+<p>
+
+Representation AUROC
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+192M
+
+</h2>
+
+<p>
+
+AIS Observations
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+Transformer
+
+</h2>
+
+<p>
+
+Self-Supervised Learning
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+Ocean Engineering
+
+</h2>
+
+<p>
+
+Journal Submission
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Gallery
+
+</div>
+
+<h2>
+
+Dashboard & Visualisations
+
+</h2>
+
+<p>
+
+Display dashboard screenshots,
+trajectory visualisations,
+latent embeddings,
+architecture diagrams,
+and anomaly heatmaps.
+
+</p>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Research Paper
+
+</div>
+
+<h2>
+
+Publication
+
+</h2>
+
+<p>
+
+NAVISIGHT
+
+A Self-Supervised Maritime Anomaly Detection Framework
+for AIS Trajectories
+
+Submitted to
+
+Ocean Engineering
+
+</p>
+
+</section>
+
+<!-- ================================================= -->
+
+<section>
+
+<div class="section-title">
+
+Future Roadmap
+
+</div>
+
+<div class="project-grid">
+
+<div class="stat-card">
+
+<h3>
+
+Foundation Maritime LLM
+
+</h3>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Trajectory Forecasting
+
+</h3>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Port Intelligence
+
+</h3>
+
+</div>
+
+<div class="stat-card">
+
+<h3>
+
+Fleet Behaviour Modelling
+
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 AK Lab
+
+</p>
+
+</footer>
+
+<script src="../../js/main.js"></script>
+
+</body>
+
+</html>

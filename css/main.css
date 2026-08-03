@@ -1,0 +1,602 @@
+/* =====================================================
+   AK LAB
+   Main Theme
+===================================================== */
+
+:root{
+
+--bg:#08111f;
+
+--surface:#0f1b2d;
+
+--surface2:#13243c;
+
+--border:#1c3556;
+
+--primary:#00c2ff;
+
+--secondary:#6b7cff;
+
+--text:#f4f7fb;
+
+--muted:#aeb8c8;
+
+--gradient:linear-gradient(
+135deg,
+#00c2ff,
+#4fd4ff,
+#7a8cff
+);
+
+--shadow:
+0 10px 30px rgba(0,0,0,.35);
+
+--radius:18px;
+
+--transition:.35s ease;
+
+}
+
+/* =====================================================
+   Reset
+===================================================== */
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:"Inter",sans-serif;
+
+background:var(--bg);
+
+color:var(--text);
+
+line-height:1.7;
+
+overflow-x:hidden;
+
+}
+
+/* =====================================================
+   Background
+===================================================== */
+
+#particles{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-2;
+
+pointer-events:none;
+
+}
+
+/* =====================================================
+   Typography
+===================================================== */
+
+h1{
+
+font-size:64px;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:28px;
+
+}
+
+h2{
+
+font-size:42px;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+}
+
+h3{
+
+font-size:26px;
+
+margin-bottom:10px;
+
+}
+
+p{
+
+font-size:18px;
+
+color:var(--muted);
+
+}
+
+.gradient{
+
+background:var(--gradient);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+/* =====================================================
+   Layout
+===================================================== */
+
+section{
+
+max-width:1280px;
+
+margin:auto;
+
+padding:110px 60px;
+
+}
+
+/* =====================================================
+   Navigation
+===================================================== */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
+z-index:1000;
+
+backdrop-filter:blur(18px);
+
+background:rgba(8,17,31,.72);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 60px;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-size:26px;
+
+font-weight:800;
+
+}
+
+.logo-ak{
+
+color:var(--primary);
+
+}
+
+.logo-lab{
+
+color:white;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:40px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+text-decoration:none;
+
+color:var(--muted);
+
+font-weight:500;
+
+transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+color:white;
+
+}
+
+.resume-btn{
+
+padding:12px 22px;
+
+border-radius:999px;
+
+background:var(--gradient);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+}
+
+.resume-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* =====================================================
+   Section Titles
+===================================================== */
+
+.section-title{
+
+display:inline-block;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-weight:700;
+
+padding:8px 18px;
+
+border-radius:999px;
+
+background:rgba(0,194,255,.12);
+
+color:var(--primary);
+
+margin-bottom:28px;
+
+}
+
+/* =====================================================
+   Buttons
+===================================================== */
+
+.primary-btn{
+
+display:inline-block;
+
+padding:15px 28px;
+
+border-radius:999px;
+
+background:var(--gradient);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:700;
+
+transition:var(--transition);
+
+box-shadow:var(--shadow);
+
+}
+
+.primary-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+display:inline-block;
+
+padding:15px 28px;
+
+border-radius:999px;
+
+border:1px solid var(--border);
+
+text-decoration:none;
+
+color:white;
+
+margin-left:18px;
+
+transition:var(--transition);
+
+}
+
+.secondary-btn:hover{
+
+background:rgba(255,255,255,.05);
+
+}
+
+/* =====================================================
+   Cards
+===================================================== */
+
+.stat-card,
+
+.project-card{
+
+background:var(--surface);
+
+border:1px solid rgba(255,255,255,.05);
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow);
+
+transition:var(--transition);
+
+overflow:hidden;
+
+}
+
+.stat-card:hover,
+
+.project-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(0,194,255,.35);
+
+}
+
+/* =====================================================
+   Stats
+===================================================== */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:28px;
+
+}
+
+.stat-card{
+
+padding:34px;
+
+text-align:center;
+
+}
+
+.stat-card h2{
+
+font-size:54px;
+
+color:var(--primary);
+
+margin-bottom:6px;
+
+}
+
+/* =====================================================
+   Projects
+===================================================== */
+
+.project-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:34px;
+
+margin-top:40px;
+
+}
+
+.project-card{
+
+text-decoration:none;
+
+color:white;
+
+}
+
+.project-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+background:#08111f;
+
+}
+
+.card-content{
+
+padding:26px;
+
+}
+
+.card-content h3{
+
+color:white;
+
+margin-bottom:8px;
+
+}
+
+.card-content p{
+
+font-size:16px;
+
+}
+
+/* =====================================================
+   Timeline
+===================================================== */
+
+.timeline-mini{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:60px;
+
+flex-wrap:wrap;
+
+gap:16px;
+
+}
+
+.timeline-mini span{
+
+font-weight:700;
+
+color:white;
+
+}
+
+.timeline-mini div{
+
+height:2px;
+
+flex:1;
+
+background:linear-gradient(
+
+90deg,
+
+var(--primary),
+
+transparent
+
+);
+
+min-width:50px;
+
+}
+
+/* =====================================================
+   Contact
+===================================================== */
+
+.socials{
+
+display:flex;
+
+gap:22px;
+
+margin-top:35px;
+
+flex-wrap:wrap;
+
+}
+
+.socials a{
+
+text-decoration:none;
+
+color:var(--muted);
+
+transition:var(--transition);
+
+}
+
+.socials a:hover{
+
+color:var(--primary);
+
+}
+
+/* =====================================================
+   Footer
+===================================================== */
+
+footer{
+
+padding:60px;
+
+text-align:center;
+
+color:#7f8a9a;
+
+font-size:15px;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+}
+
+/* =====================================================
+   Utility
+===================================================== */
+
+.fade{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:none;
+
+}

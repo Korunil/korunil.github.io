@@ -1,0 +1,430 @@
+/* =====================================================
+   AK LAB
+   Responsive Layout
+===================================================== */
+
+/* ------------------------------
+   Large Desktop
+------------------------------ */
+
+@media (min-width:1600px){
+
+section{
+
+max-width:1450px;
+
+}
+
+.hero h1{
+
+font-size:78px;
+
+}
+
+.hero-description{
+
+font-size:22px;
+
+}
+
+}
+
+/* ------------------------------
+   Laptop
+------------------------------ */
+
+@media (max-width:1200px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:60px;
+
+}
+
+.hero-content{
+
+margin:auto;
+
+}
+
+.hero-description{
+
+margin:auto auto 45px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-image{
+
+order:-1;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.project-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ------------------------------
+   Tablet
+------------------------------ */
+
+@media (max-width:900px){
+
+.navbar{
+
+padding:18px 30px;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+section{
+
+padding:90px 30px;
+
+}
+
+.hero h1{
+
+font-size:52px;
+
+letter-spacing:-1px;
+
+}
+
+.hero-description{
+
+font-size:18px;
+
+}
+
+.hero-image img{
+
+width:300px;
+
+height:300px;
+
+}
+
+.hero-image::before{
+
+width:400px;
+
+height:400px;
+
+}
+
+.hero-image::after{
+
+width:330px;
+
+height:330px;
+
+}
+
+.project-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline-mini{
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.timeline-mini div{
+
+width:2px;
+
+height:40px;
+
+background:linear-gradient(
+
+180deg,
+
+var(--primary),
+
+transparent
+
+);
+
+}
+
+.socials{
+
+justify-content:center;
+
+}
+
+}
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width:600px){
+
+header{
+
+backdrop-filter:blur(14px);
+
+}
+
+.navbar{
+
+padding:16px 18px;
+
+}
+
+.logo{
+
+font-size:22px;
+
+}
+
+.resume-btn{
+
+padding:10px 18px;
+
+font-size:14px;
+
+}
+
+section{
+
+padding:80px 20px;
+
+}
+
+.hero{
+
+padding-top:110px;
+
+gap:40px;
+
+}
+
+.hero-tag{
+
+font-size:12px;
+
+padding:8px 16px;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+line-height:1.15;
+
+}
+
+.hero-description{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+.primary-btn,
+
+.secondary-btn{
+
+margin:0;
+
+width:100%;
+
+text-align:center;
+
+}
+
+.hero-image img{
+
+width:240px;
+
+height:240px;
+
+}
+
+.hero-image::before{
+
+width:300px;
+
+height:300px;
+
+}
+
+.hero-image::after{
+
+width:260px;
+
+height:260px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.stat-card{
+
+padding:28px;
+
+}
+
+.stat-card h2{
+
+font-size:44px;
+
+}
+
+.section-title{
+
+font-size:12px;
+
+letter-spacing:1px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+.project-card img{
+
+height:190px;
+
+padding:16px;
+
+}
+
+.card-content{
+
+padding:22px;
+
+}
+
+.card-content h3{
+
+font-size:24px;
+
+}
+
+.tech-tags{
+
+gap:8px;
+
+}
+
+.tech-tags span{
+
+font-size:12px;
+
+padding:6px 12px;
+
+}
+
+.project-features{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline-mini{
+
+font-size:14px;
+
+}
+
+footer{
+
+padding:40px 20px;
+
+font-size:13px;
+
+}
+
+}
+
+/* ------------------------------
+   Very Small Devices
+------------------------------ */
+
+@media (max-width:380px){
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero-image img{
+
+width:210px;
+
+height:210px;
+
+}
+
+.hero-description{
+
+font-size:15px;
+
+}
+
+.logo{
+
+font-size:20px;
+
+}
+
+.resume-btn{
+
+display:none;
+
+}
+
+}
