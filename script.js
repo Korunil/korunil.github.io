@@ -1,299 +1,292 @@
 /* ==========================================================
-   AK LAB Portfolio
+   ANIL KUMAR KORUPOJU
+   Portfolio Website
    script.js
 ========================================================== */
 
 
-/* ==========================================================
-   Navbar Shadow on Scroll
-========================================================== */
+/* ===========================================
+   Smooth Fade-in Animations
+=========================================== */
 
-const navbar = document.querySelector("header");
+const observer = new IntersectionObserver(
 
-window.addEventListener("scroll", () => {
+(entries)=>{
 
-    if(window.scrollY > 40){
+entries.forEach(entry=>{
 
-        navbar.style.boxShadow = "0 8px 30px rgba(15,23,42,.08)";
+if(entry.isIntersecting){
 
-    }
+entry.target.classList.add("show");
 
-    else{
+}
 
-        navbar.style.boxShadow = "none";
+});
 
-    }
+},
+
+{
+
+threshold:0.15
+
+}
+
+);
+
+document.querySelectorAll("section,.card,.metric").forEach(el=>{
+
+el.classList.add("hidden");
+
+observer.observe(el);
 
 });
 
 
-/* ==========================================================
-   Reveal Animation
-========================================================== */
+/* ===========================================
+   Typing Effect
+=========================================== */
 
-const observer = new IntersectionObserver((entries)=>{
+const title=document.querySelector(".hero h2");
 
-    entries.forEach(entry=>{
+if(title){
 
-        if(entry.isIntersecting){
+const text=title.innerText;
 
-            entry.target.classList.add("show");
+title.innerText="";
 
-        }
+let i=0;
 
-    });
+function type(){
 
-},{
-    threshold:0.15
-});
+if(i<text.length){
 
+title.innerHTML+=text.charAt(i);
 
-document.querySelectorAll(".section").forEach(section=>{
+i++;
 
-    section.classList.add("hidden");
+setTimeout(type,40);
 
-    observer.observe(section);
+}
 
-});
+}
 
-
-/* ==========================================================
-   Animated Statistics
-========================================================== */
-
-const counters = document.querySelectorAll(".stat-card h2");
-
-let started = false;
-
-window.addEventListener("scroll", ()=>{
-
-    const stats = document.querySelector(".stats");
-
-    if(!stats) return;
-
-    const trigger = stats.getBoundingClientRect().top;
-
-    if(trigger < window.innerHeight && !started){
-
-        started = true;
-
-        counters.forEach(counter=>{
-
-            const value = counter.innerText;
-
-            if(value.includes("+")){
-
-                const number = parseInt(value);
-
-                animateCounter(counter,number,value);
-
-            }
-
-        });
-
-    }
-
-});
-
-
-function animateCounter(element,target,label){
-
-    let count = 0;
-
-    const speed = target/60;
-
-    const update=()=>{
-
-        count += speed;
-
-        if(count<target){
-
-            element.innerText=Math.floor(count)+"+";
-
-            requestAnimationFrame(update);
-
-        }
-
-        else{
-
-            element.innerText=label;
-
-        }
-
-    }
-
-    update();
+type();
 
 }
 
 
-/* ==========================================================
-   Smooth Navigation
-========================================================== */
+/* ===========================================
+   Navbar Active Section
+=========================================== */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+const sections=document.querySelectorAll("section");
 
-    anchor.addEventListener("click",function(e){
-
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-
-            behavior:"smooth"
-
-        });
-
-    });
-
-});
-
-
-/* ==========================================================
-   Active Navigation Highlight
-========================================================== */
-
-const sections = document.querySelectorAll("section");
-
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinks=document.querySelectorAll("nav a");
 
 window.addEventListener("scroll",()=>{
 
-    let current="";
+let current="";
 
-    sections.forEach(section=>{
+sections.forEach(section=>{
 
-        const sectionTop = section.offsetTop-120;
+const top=section.offsetTop-120;
 
-        if(window.pageYOffset>=sectionTop){
+if(scrollY>=top){
 
-            current = section.getAttribute("id");
+current=section.getAttribute("id");
 
-        }
+}
 
-    });
+});
 
-    navLinks.forEach(link=>{
+navLinks.forEach(link=>{
 
-        link.classList.remove("active");
+link.classList.remove("active");
 
-        if(link.getAttribute("href")==="#"+current){
+if(link.getAttribute("href")==="#"+current){
 
-            link.classList.add("active");
+link.classList.add("active");
 
-        }
+}
 
-    });
+});
 
 });
 
 
-/* ==========================================================
-   Hero Typing Effect
-========================================================== */
+/* ===========================================
+   Card Tilt Effect
+=========================================== */
 
-const titles = [
-
-"Enterprise AI",
-
-"Generative AI",
-
-"Agentic AI",
-
-"Industrial Intelligence"
-
-];
-
-const heroTitle = document.querySelector(".hero h3");
-
-let titleIndex = 0;
-
-setInterval(()=>{
-
-    titleIndex++;
-
-    if(titleIndex>=titles.length){
-
-        titleIndex=0;
-
-    }
-
-    heroTitle.style.opacity=0;
-
-    setTimeout(()=>{
-
-        heroTitle.innerText=titles[titleIndex];
-
-        heroTitle.style.opacity=1;
-
-    },300);
-
-},3500);
-
-
-/* ==========================================================
-   Floating Hero Animation
-========================================================== */
-
-const hero = document.querySelector(".hero-content");
-
-window.addEventListener("mousemove",(e)=>{
-
-    const x = (window.innerWidth/2-e.clientX)/60;
-
-    const y = (window.innerHeight/2-e.clientY)/60;
-
-    hero.style.transform=`translate(${x}px,${y}px)`;
-
-});
-
-
-/* ==========================================================
-   Project Hover Tilt
-========================================================== */
-
-document.querySelectorAll(".project-card").forEach(card=>{
+document.querySelectorAll(".card").forEach(card=>{
 
 card.addEventListener("mousemove",(e)=>{
 
-const rect = card.getBoundingClientRect();
+const rect=card.getBoundingClientRect();
 
-const x = e.clientX-rect.left;
+const x=e.clientX-rect.left;
 
-const y = e.clientY-rect.top;
+const y=e.clientY-rect.top;
 
-const rotateY=(x-rect.width/2)/20;
+const rotateX=(y-rect.height/2)/20;
 
-const rotateX=(rect.height/2-y)/20;
+const rotateY=(rect.width/2-x)/20;
 
 card.style.transform=
 
-`perspective(800px)
-
-rotateX(${rotateX}deg)
-
-rotateY(${rotateY}deg)
-
-translateY(-8px)`;
+`rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
 
 });
 
 card.addEventListener("mouseleave",()=>{
 
-card.style.transform="translateY(0px)";
+card.style.transform="";
 
 });
 
 });
 
 
-/* ==========================================================
+/* ===========================================
+   Counter Animation
+=========================================== */
+
+document.querySelectorAll(".metric h3").forEach(counter=>{
+
+const observerCounter=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+const element=entry.target;
+
+const target=element.innerText;
+
+const number=parseInt(target.replace(/[^\d]/g,""));
+
+if(isNaN(number)) return;
+
+const suffix=target.replace(number,"");
+
+let count=0;
+
+const step=Math.ceil(number/60);
+
+const interval=setInterval(()=>{
+
+count+=step;
+
+if(count>=number){
+
+count=number;
+
+clearInterval(interval);
+
+}
+
+element.innerText=count+suffix;
+
+},25);
+
+observerCounter.unobserve(element);
+
+}
+
+});
+
+});
+
+observerCounter.observe(counter);
+
+});
+
+
+/* ===========================================
+   Image Hover Zoom
+=========================================== */
+
+document.querySelectorAll(".card img").forEach(img=>{
+
+img.addEventListener("mouseenter",()=>{
+
+img.style.transition=".4s";
+
+img.style.transform="scale(1.05)";
+
+});
+
+img.addEventListener("mouseleave",()=>{
+
+img.style.transform="scale(1)";
+
+});
+
+});
+
+
+/* ===========================================
+   Scroll To Top Button
+=========================================== */
+
+const topBtn=document.createElement("button");
+
+topBtn.innerHTML="↑";
+
+topBtn.id="topButton";
+
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>600){
+
+topBtn.style.opacity="1";
+
+topBtn.style.visibility="visible";
+
+}else{
+
+topBtn.style.opacity="0";
+
+topBtn.style.visibility="hidden";
+
+}
+
+});
+
+topBtn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+
+/* ===========================================
    Footer Year
-========================================================== */
+=========================================== */
 
-const footer = document.querySelector("footer");
+const year=document.getElementById("year");
 
-const year = new Date().getFullYear();
+if(year){
 
-footer.innerHTML +=
+year.innerText=new Date().getFullYear();
 
-`<br><br><small>© ${year} AK LAB</small>`;
+}
+
+
+/* ===========================================
+   Console Easter Egg
+=========================================== */
+
+console.log("%cWelcome to AK Portfolio",
+
+"color:#60a5fa;font-size:20px;font-weight:bold");
+
+console.log("Built with ❤️ by Anil Kumar Korupoju");
