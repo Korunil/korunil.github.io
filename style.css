@@ -840,3 +840,85 @@ background:#334155;
 font-size:.75rem;
 
 }
+
+/* =====================================================
+GITHUB
+===================================================== */
+
+.github-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.github-card{
+
+background:#1e293b;
+
+padding:20px;
+
+border-radius:18px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.3s;
+
+}
+
+.github-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 12px 35px rgba(0,0,0,.35);
+
+}
+
+.github-card img{
+
+width:100%;
+
+display:block;
+
+}
+
+.github-button{
+
+margin-top:40px;
+
+text-align:center;
+
+}
+
+.github-button a{
+
+display:inline-block;
+
+padding:14px 28px;
+
+background:#2563eb;
+
+border-radius:12px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.github-button a:hover{
+
+background:#3b82f6;
+
+transform:translateY(-2px);
+
+}
