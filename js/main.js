@@ -49,12 +49,14 @@ revealObserver.observe(element);
 
 const counters = document.querySelectorAll(".counter");
 
-const speed = 80;
+const speed = 60;
 
 function animateCounter(counter){
 
 const target = Number(counter.dataset.target);
 
+const hasPlus = counter.dataset.plus === "true";
+   
 let value = 0;
 
 const step = Math.ceil(target/speed);
@@ -65,7 +67,7 @@ value += step;
 
 if(value >= target){
 
-counter.innerText = target;
+counter.innerText = hasPlus ? target + "+" : target;
 
 return;
 
