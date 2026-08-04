@@ -449,6 +449,12 @@ padding:34px;
 
 text-align:center;
 
+display: block;
+   
+text-decoration: none;
+    
+color: inherit;
+
 }
 
 .stat-card h2{
@@ -460,6 +466,15 @@ color:var(--primary);
 margin-bottom:6px;
 
 }
+
+.stat-card h3,
+
+.stat-card p {
+   
+color: inherit;
+   
+}
+
 
 /* =====================================================
    Projects
