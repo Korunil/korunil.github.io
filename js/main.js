@@ -274,9 +274,9 @@ const heroTag=document.querySelector(".hero-tag");
 
 if(heroTag){
 
-const text=heroTag.innerText;
+const text=heroTag.textContent.trim();
 
-heroTag.innerText="";
+heroTag.textContent="";
 
 let i=0;
 
@@ -284,7 +284,7 @@ function type(){
 
 if(i<text.length){
 
-heroTag.innerText+=text.charAt(i);
+heroTag.textContent+=text.charAt(i);
 
 i++;
 
