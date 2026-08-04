@@ -453,7 +453,7 @@ border-color:rgba(0,194,255,.35);
 
 display:grid;
 
-grid-template-columns:1fr 1fr 1fr 1.3fr;
+grid-template-columns:1fr 1fr 1fr 1.5fr;
 
 gap:28px;
 
@@ -465,11 +465,6 @@ padding:34px;
 
 text-align:center;
 
-display: block;
-   
-text-decoration: none;
-    
-color: inherit;
 
 }
 
@@ -822,3 +817,44 @@ margin-top: 35px;
     box-shadow:var(--shadow);
 
 }
+
+
+/* =====================================================
+   Progress Bar
+===================================================== */
+
+.active{
+
+color:white!important;
+
+}
+
+#progressBar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:3px;
+
+width:0;
+
+background:linear-gradient(
+
+90deg,
+
+#00c2ff,
+
+#6b7cff
+
+);
+
+z-index:99999;
+
+transition:.15s;
+
+}
+
+
