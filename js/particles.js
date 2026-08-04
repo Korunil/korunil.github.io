@@ -42,13 +42,13 @@ class Particle {
 
         this.y = Math.random() * canvas.height;
 
-        this.radius = Math.random() * 2.5 + 1;
+        this.radius = Math.random() * 3 + 1;
 
-        this.speedX = (Math.random() - 0.5) * 0.3;
+        this.speedX = (Math.random() - 0.5) * 0.35;
 
-        this.speedY = (Math.random() - 0.5) * 0.3;
+        this.speedY = (Math.random() - 0.5) * 0.35;
 
-        this.opacity = Math.random() * 0.35 + 0.10;
+        this.opacity = Math.random() * 0.35 + 0.15;
 
     }
 
@@ -96,7 +96,7 @@ class Particle {
    Generate
 ========================================================== */
 
-const particleCount = 99;
+const particleCount = 125;
 
 for (let i = 0; i < particleCount; i++) {
 
@@ -130,7 +130,7 @@ function connectParticles() {
                         (130 - distance) / 130 * 0.08
                     })`;
 
-                ctx.lineWidth = 1.15;
+                ctx.lineWidth = 1.25;
 
                 ctx.moveTo(
 
@@ -202,7 +202,7 @@ function animate() {
 
             const dist = Math.sqrt(dx * dx + dy * dy);
 
-            if (dist < 120) {
+            if (dist < 150) {
 
                 ctx.beginPath();
 
