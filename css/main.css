@@ -347,7 +347,7 @@ transform:translateY(-4px);
 
 display:inline-block;
 
-margin-top: 12px;
+margin-top: 18px;
 
 padding:15px 28px;
 
@@ -358,6 +358,8 @@ border:1px solid var(--border);
 text-decoration:none;
 
 color:white;
+   
+font-weight:700;
 
 margin-left:18px;
 
@@ -368,6 +370,14 @@ transition:var(--transition);
 .secondary-btn:hover{
 
 background:rgba(255,255,255,.05);
+
+}
+
+.primary-btn,
+
+.secondary-btn {
+   
+line-height:1.2;
 
 }
 
