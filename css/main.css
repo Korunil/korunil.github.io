@@ -453,7 +453,7 @@ border-color:rgba(0,194,255,.35);
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:1fr 1fr 1fr 1.3fr;
 
 gap:28px;
 
@@ -481,19 +481,6 @@ color:var(--primary);
 
 margin-bottom:6px;
 
-}
-
-.stat-label h2 {
-
-    padding-left:10px;
-    padding-right:10px;
-   
-    font-size:36px;
-   
-    line-height:1.2;
-   
-    white-space:nowrap;
-   
 }
 
 .stat-card h3,
