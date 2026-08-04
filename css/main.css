@@ -798,3 +798,27 @@ margin-top: 35px;
 .gallery img:hover {
     transform:translateY(-6px);
 }
+
+/* =====================================================
+   Embed PDF
+===================================================== */
+
+.pdf-container {
+
+    width:70%;
+    max-width:1000px;
+    margin:40px auto;
+
+}
+
+.pdf-container iframe {
+
+    width:100%;
+    height:800px;
+
+    border:none;
+    border-radius:16px;
+
+    box-shadow:var(--shadow);
+
+}
