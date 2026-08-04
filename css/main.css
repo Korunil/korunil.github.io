@@ -469,9 +469,9 @@ border-color:rgba(0,194,255,.35);
 
 display:grid;
 
-grid-template-columns:1fr 1fr 1fr 1.5fr 1.3fr;
+grid-template-columns:1fr 1.6fr 1fr 1fr 1.5fr;
 
-gap:20px;
+gap:18px;
 
 }
 
@@ -486,7 +486,7 @@ text-align:center;
 
 .stat-card h2{
 
-font-size:36px;
+font-size:34px;
 
 color:var(--primary);
 
