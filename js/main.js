@@ -47,12 +47,12 @@ revealObserver.observe(element);
    Animated Counters
 ------------------------------------------------------------ */
 
-function animateCounter(counter){
-
 const target = Number(counter.dataset.target);
 
 const hasPlus = counter.dataset.plus === "true";
 
+function animateCounter(counter){
+   
 let value = 0;
 
 const speed = 60;
