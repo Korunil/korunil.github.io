@@ -737,3 +737,21 @@ opacity:1;
 transform:none;
 
 }
+
+/* =====================================================
+   Embed Video
+===================================================== */
+
+.demo-video {
+   
+width: 100%;
+   
+max-width: 900px;
+   
+border-radius: 16px;
+   
+box-shadow: var(--shadow);
+   
+margin-top: 20px;
+   
+}
