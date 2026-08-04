@@ -484,9 +484,13 @@ margin-bottom:6px;
 }
 
 .stat-label h2 {
-    font-size:54px;
-    transform:scale(.7);
+   
+    font-size:32px;
+   
+    line-height:1.2;
+   
     white-space:nowrap;
+   
 }
 
 .stat-card h3,
