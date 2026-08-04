@@ -211,12 +211,16 @@ font-weight:800;
 
 .logo-ak{
 
+text-decoration: none;
+   
 color:var(--primary);
 
 }
 
 .logo-lab{
 
+text-decoration: none;
+   
 color:white;
 
 }
