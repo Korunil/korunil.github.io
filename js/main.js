@@ -49,41 +49,41 @@ revealObserver.observe(element);
 
 const counters = document.querySelectorAll(".counter");
 
-const hasPlus = counter.dataset.plus === "true";
-
 const speed = 60;
 
 function animateCounter(counter){
 
-const target = Number(counter.dataset.target);
+    const target = Number(counter.dataset.target);
 
-let value = 0;
+    const hasPlus = counter.dataset.plus === "true";
 
-const step = Math.ceil(target/speed);
+    let value = 0;
 
-const update = ()=>{
+    const step = Math.ceil(target / speed);
 
-value += step;
+    const update = () => {
 
-if(value >= target){
-   
-counter.innerText = hasPlus ? target + "+" : target;
-   
+        value += step;
+
+        if(value >= target){
+
+            counter.innerText = hasPlus ? target + "+" : target;
+
+            return;
+
+        }
+
+        counter.innerText = value;
+
+        requestAnimationFrame(update);
+
+    };
+
+    update();
+
 }
 
-return;
-
-}
-
-counter.innerText = value;
-
-requestAnimationFrame(update);
-
-};
-
-update();
-
-}
+counters.forEach(counter => animateCounter(counter));
 
 const counterObserver = new IntersectionObserver(
 
