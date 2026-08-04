@@ -50,31 +50,32 @@ revealObserver.observe(element);
 function animateCounter(counter){
 
 const target = Number(counter.dataset.target);
+
 const hasPlus = counter.dataset.plus === "true";
 
 let value = 0;
-const duration = 1000; // milliseconds
-const fps = 60;
-const totalFrames = Math.round(duration / (1000 / fps));
-const step = target / totalFrames;
 
-function update(){
+const speed = 60;
+
+const step = Math.ceil(target / speed);
+
+const update = ()=>{
 
 value += step;
 
 if(value >= target){
 
-counter.textContent = hasPlus ? `${target}+` : `${target}`;
+counter.innerText = hasPlus ? target + "+" : target;
 
 return;
 
 }
 
-counter.textContent = Math.floor(value);
+counter.innerText = value;
 
 requestAnimationFrame(update);
 
-}
+};
 
 update();
 
