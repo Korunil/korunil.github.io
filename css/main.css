@@ -453,9 +453,9 @@ border-color:rgba(0,194,255,.35);
 
 display:grid;
 
-grid-template-columns:1fr 1fr 1fr 1.5fr;
+grid-template-columns:1fr 1fr 1fr 1.5fr 1.2fr;
 
-gap:28px;
+gap:20px;
 
 }
 
