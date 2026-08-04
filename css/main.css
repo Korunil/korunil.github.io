@@ -453,7 +453,7 @@ border-color:rgba(0,194,255,.35);
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr);
+grid-template-columns:repeat(4,1fr);
 
 gap:28px;
 
