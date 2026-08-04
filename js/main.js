@@ -47,37 +47,34 @@ revealObserver.observe(element);
    Animated Counters
 ------------------------------------------------------------ */
 
-const counters = document.querySelectorAll(".counter");
-
-const speed = 60;
-
 function animateCounter(counter){
 
 const target = Number(counter.dataset.target);
-
 const hasPlus = counter.dataset.plus === "true";
-   
+
 let value = 0;
+const duration = 1000; // milliseconds
+const fps = 60;
+const totalFrames = Math.round(duration / (1000 / fps));
+const step = target / totalFrames;
 
-const step = Math.ceil(target/speed);
-
-const update = ()=>{
+function update(){
 
 value += step;
 
 if(value >= target){
 
-counter.innerText = hasPlus ? target + "+" : target;
+counter.textContent = hasPlus ? `${target}+` : `${target}`;
 
 return;
 
 }
 
-counter.innerText = value;
+counter.textContent = Math.floor(value);
 
 requestAnimationFrame(update);
 
-};
+}
 
 update();
 
